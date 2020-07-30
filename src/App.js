@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return <div className="App"></div>;
+  return <div className="page-body">Mercs</div>;
 }
 
 export default App;
