@@ -1,0 +1,76 @@
+.box,
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-rounded,
+.box-rounded-1,
+.box-rounded-2,
+.box-rounded-3,
+.box-rounded-4 {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box-1,
+.box-rounded-1 {
+    padding: 20px;
+}
+
+.box-2,
+.box-rounded-2 {
+    padding: 40px;
+}
+
+.box-3,
+.box-rounded-3 {
+    padding: 60px;
+}
+
+.box-4,
+.box-rounded-4 {
+    padding: 80px;
+}
+
+.box-rounded,
+.box-rounded-1,
+.box-rounded-2,
+.box-rounded-3,
+.box-rounded-4 {
+    border-radius: 6px;
+}
+
+/* line between boxes
+   Used JS code to add .box-line-top and .box-last classnames */
+.box-line {
+
+    // line
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 2rem;
+        right: 0;
+        bottom: 2rem;
+        border-left: 1px solid;
+        opacity: .07;
+    }
+
+    &.box-line-top::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 2rem;
+        left: 2rem;
+        border-bottom: 1px solid;
+        opacity: .07;
+    }
+
+    &.box-last::before {
+        content: none;
+    }
+}

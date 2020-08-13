@@ -1,0 +1,20 @@
+.fullscreen-block {
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+
+    .fullscreen-block-top,
+    .fullscreen-block-middle,
+    .fullscreen-block-bottom {
+        display: table-row;
+    }
+
+    .fullscreen-block-middle {
+        height: 80%;
+
+        >div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}

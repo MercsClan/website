@@ -1,0 +1,46 @@
+.counter,
+.counter-2,
+.counter-3 {
+    position: relative;
+
+    .count {
+        font-family: $font_headings;
+        font-weight: 600;
+    }
+}
+
+/* Style 1 */
+.counter {
+    .count {
+        font-size: 4rem;
+    }
+}
+
+/* Style 2 */
+.counter-2 {
+    .count {
+        font-size: 4rem;
+        line-height: 1;
+        color: $color_main_1;
+    }
+}
+
+/* Style 3 */
+.counter-3 {
+    .counter-icon {
+        font-size: 3rem;
+        line-height: 1;
+        color: $color_main_1;
+    }
+
+    .count {
+        font-size: 3rem;
+        line-height: 2;
+    }
+
+    .counter-title {
+        font-family: $font_body;
+        font-weight: 400;
+        line-height: 1;
+    }
+}

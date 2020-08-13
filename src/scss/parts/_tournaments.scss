@@ -1,0 +1,217 @@
+/* Teammate */
+.teammate-card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    background-color: $color_dark_2;
+    border-radius: 4px;
+
+    .teammate-card-photo {
+        align-self: flex-end;
+        width: 50%;
+        padding-right: 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .teammate-card-info {
+        width: 50%;
+        padding-left: 15px;
+
+        >table {
+            width: 100%;
+        }
+
+        >table>tbody>tr>td {
+            padding: 20px 10px;
+        }
+    }
+
+    @media #{$media_smaller_xs} {
+        display: block;
+
+        .teammate-card-photo,
+        .teammate-card-info {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+/* Score */
+.match-score {
+    display: inline-block;
+    padding: 9px 19px;
+    font-family: $font_headings;
+    font-size: .87rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $color_headings;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    background-color: lighten($color_dark_2, 10%);
+    border-radius: 4px;
+}
+
+/* Match */
+.match {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    color: $color_headings;
+    background-color: $color_dark_2;
+    border-radius: 4px;
+
+    +.match {
+        margin-top: 15px;
+    }
+
+    .match-team-logo img {
+        border-radius: 4px;
+    }
+
+    .match-team-left,
+    .match-team-right,
+    .match-status {
+        width: 35%;
+
+        >a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                color: $color_main_1;
+            }
+        }
+    }
+
+    .match-team-left>*,
+    .match-team-right>* {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .match-status {
+        width: 30%;
+        text-align: center;
+
+        .match-status-vs {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .match-status-date {
+            display: block;
+            font-size: .9em;
+        }
+
+        .match-score {
+            margin-top: 10px;
+        }
+    }
+
+    .match-team-right {
+        text-align: right;
+    }
+
+    .match-team-name {
+        flex: 1;
+        font-family: $font_headings;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .match-team-left .match-team-name {
+        padding-left: 20px;
+    }
+
+    .match-team-right .match-team-name {
+        padding-right: 20px;
+    }
+
+    @media #{$media_smaller_sm} {
+        display: block;
+
+        .match-team-left,
+        .match-team-right,
+        .match-status {
+            width: 100%;
+        }
+
+        .match-status {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+/* Team */
+.team {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    color: $color_headings;
+    background-color: $color_dark_2;
+    border-radius: 4px;
+
+    +.team {
+        margin-top: 15px;
+    }
+
+    .team-logo {
+        align-self: flex-start;
+    }
+
+    .team-logo img {
+        max-width: 140px;
+        height: auto;
+
+        @media #{$media_smaller_xs} {
+            max-width: 50px;
+        }
+    }
+
+    .team-cont {
+        position: relative;
+        flex: 1;
+        padding: 20px;
+        z-index: 0;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &.hover,
+            &:focus,
+            &:active {
+                color: $color_main_1;
+            }
+        }
+
+        .team-photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            z-index: -1;
+
+            @media #{$media_smaller_xs} {
+                display: none;
+            }
+        }
+    }
+}

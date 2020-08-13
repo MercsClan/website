@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/goodgames.css';
+import './scss/goodgames.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
